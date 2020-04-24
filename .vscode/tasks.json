@@ -1,0 +1,43 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "gcc.exe build active file",
+            "command": "C:\\ProgramData\\chocolatey\\bin\\gcc.exe",
+            "args": [
+                "${file}",
+                "-g",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "C:\\ProgramData\\chocolatey\\bin"
+            },
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "gcc build active file",
+            "command": "C:\\ProgramData\\chocolatey\\bin\\gcc.exe",
+            "args": [
+                "${file}",
+                "-g",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "C:\\ProgramData\\chocolatey\\bin"
+            },
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "version": "2.0.0"
+}
