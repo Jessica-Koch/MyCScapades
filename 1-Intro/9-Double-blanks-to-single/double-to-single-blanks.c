@@ -1,13 +1,12 @@
 #include <stdio.h>
 
-int main() {
+int main () {
     int c, prev;
 
     while((c = getchar()) != EOF) {
-        // character isn't a space
-        if(c != ' ') {
+        if (c != ' ') {
             putchar(c);
-        } else { // characer is a space
+        } else {
             if(prev != ' ') {
                 putchar(c);
             }
