@@ -8,15 +8,15 @@ int main() {
 
     while(((c = getchar() ) != EOF)) {
         if(prev != NEWLINE) {
-            putschar(c);
+            putchar(c);
             prev = c;
         if(c == NEWLINE) {
             prev = NEWLINE;
-            putschar(c);
+            putchar(c);
         }
-            if(c == ' ' || '\t') {
+            if(c == ' ' || c == '\t') {
                 c = '\n';
-                putschar(c);
+                putchar(c);
                 prev = OTHER;
             }
         }
