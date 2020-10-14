@@ -8,6 +8,9 @@ void print_reverse(char *s)
     // size of things
     size_t len = strlen(s); // strlen('abc') == 3
 
+    // this moves the pointer to the last character
+    // could also write t--
+
     char *t = s + len - 1;
 
     while (t >= s)

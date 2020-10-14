@@ -24,10 +24,11 @@ int main()
     print_reverse(juices[7]);
 
     a = juices[2];
-    
+    juices[2] = juices[8];
+
     juices[8] = a;
     puts(juices[8]);
-    print_reverse(juices[3]);
+    print_reverse(juices[(18 + 7) / 5]);
     puts(juices[2]);
     print_reverse(juices[9]);
 
