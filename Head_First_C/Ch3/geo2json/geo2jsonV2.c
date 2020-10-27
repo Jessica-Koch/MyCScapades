@@ -22,12 +22,12 @@ int main()
 
         if (latitude < -90.0 || latitude > 90.0)
         {
-            printf("Invalid latitde: %f\n", latitude);
+            fprintf(stderr, "Invalid latitde: %f\n", latitude);
             return 2; // causes the code to exit with error status code of 2
         }
         if (longitude < -180 || longitude > 180)
         {
-            printf("Invalid longitude: %f\n", longitude);
+            fprintf(stderr, "Invalid longitude: %f\n", longitude);
             return 2; // Causes the code to exit with error status code of 2
         }
 

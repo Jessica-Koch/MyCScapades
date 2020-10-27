@@ -8,4 +8,3 @@ data=[
 {latitude: 42.362965, longitude: -71.093201, info: 'Speed = 18'},
 {latitude: 42.362892, longitude: -71.092323, info: 'Speed = 22'},
 {latitude: 42.362820, longitude: -71.091446, info: 'Speed = 17'},
-Invalid latitde: 242.362747
