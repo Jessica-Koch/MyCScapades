@@ -7,24 +7,32 @@ int main()
     char info[80];
     int started = 0;
 
-    puts("data =[");
+    puts("data=[");
+    while (scanf("%f, %f,%79[^\n]", &latitude, &longitude, info) == 3)
 
-    // scanf takes pointers, since info is already an array, it is, by default, a pointer already
-    while (scanf("%f, %f, %79[^\n]", &latitude, &longitude, info) == 3) // ^ means give every character up to the end of the line
     {
         if (started)
         {
-            printf(",\n"); // displaying a comma only if we've displayed a previous line
+            printf(",\n");
         }
         else
         {
-            started = 1; // once the loop has stgarted, you can set "started" to 1
+            started = 1;
         }
-        // printf takes values and not the addresses of the numbers
+
+        if (latitude < -90.0 || latitude > 90.0)
+        {
+            fprintf(stderr, "Invalid latitde: %f\n", latitude);
+            return 2; // causes the code to exit with error status code of 2
+        }
+        if (longitude < -180 || longitude > 180)
+        {
+            fprintf(stderr, "Invalid longitude: %f\n", longitude);
+            return 2; // Causes the code to exit with error status code of 2
+        }
+
         printf("{latitude: %f, longitude: %f, info: '%s'}", latitude, longitude, info);
     }
     puts("\n]");
     return 0;
-}
-
-// 42.363400, -71.098465,Speed = 21
+};
